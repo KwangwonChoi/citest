@@ -1,24 +1,21 @@
 language: python
 python:
-  - "3.6"
-
+- '3.6'
 branches:
   only:
   - master
   - develop
-  - /^release-.*$/
+  - "/^release-.*$/"
   - travis-test
-
 install:
-  - pip install wheel
-
+- pip install wheel
 script:
-  - python setup.py test
-
+- python setup.py test
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
   user: GwangwonChoi
-  password: $PYPI_PW
+  password:
+    secure: N90fckMnyCSxDncMcYVkyVEvYToSxlxlBHt6CMVFIA5G1I6o1WCbQqug/xkZUCGgNY2ZHHlA4g9ky+GP22eEH43mnWAkO9ZKAvIQcfObB0aKGmqd8kokFdFX5BiDrC8W/6lTvCzJF95eQXn/L5+jsE0+HYPSNfjpZ16mIE5GaU9M3G81whUMBL1O74i1f66UlVUiG9CFaCqpClngNC2r4l/2RR93X3MiiugugsDU+5GhyT00gjHQSCsoDUDSO8Rd/RwTYYSRBAzZ2iChnD0HS4bzDmhkdeQWx5ebsg8OLa3GT42PjwHotzAKU/kdVxZvqP/lcqc2yWfJiLmuCFz6y3ql1Kg/Jnwvx5ekVLAQ+Wer+FBtBd/X6cpWxuh6A8mL4s0MZidbyenfYkDYkrvJZGZz5ifG9JZDyf4848rPnWCrwqKn03664uH9QOlxsaFUhqoliru33vfSS9QFNaCyjha8t5JtHzbvKSMp//MIVk5+vqeWR0iDNRN/XZnJW52y0gw8eFiZ/0tjwmJnAoDPTWHzYdTi59mfklRBdzvFojXCpQmuZcjWfd3NZyHq84LIRC37cmh0OyUxWYUq/iBsnYJFzQ5mzK37vc1PgoVBC843JnR4JDOODqQ7MO7wiOLZ2JKrfGVx+EkJg6EU+TLh2bH0N0S+QekFzztzZ6dctkg=
   on:
     branch: master
