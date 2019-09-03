@@ -1,9 +1,0 @@
-setup.py
-ci_test/__init__.py
-ci_test/__main__.py
-ci_test/test.py
-ci_test.egg-info/PKG-INFO
-ci_test.egg-info/SOURCES.txt
-ci_test.egg-info/dependency_links.txt
-ci_test.egg-info/entry_points.txt
-ci_test.egg-info/top_level.txt
