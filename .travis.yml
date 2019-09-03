@@ -15,7 +15,6 @@ deploy:
   provider: pypi
   distributions: sdist bdist_wheel
   user: GwangwonChoi
-  password:
-    secure: $PYPI_PW
+  password: $PYPI_PW
   on:
     branch: master
